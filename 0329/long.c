@@ -4,12 +4,12 @@ void copy(char from[], char to[]);
 char line[MAXLINE]; // 입력 줄
 char longest[MAXLINE]; // 가장 긴 줄
 /*입력 줄 가운데 가장 긴 줄 프린트 */
-main()
+int main()
 {
 int len;
 int max;
 max = 0;
-while (gets(line) != NULL) {
+while(fgets(line, MAXLINE, stdin) != NULL) {
 len = strlen(line);
 if (len > max) {
 max = len;
